@@ -1,0 +1,1078 @@
+/*
+ * Copyright 2011 digital china financial software Inc.
+ * All rights reserved.
+ * project name: com.dcfs.teller.messageCell      
+ * version:            
+ *---------------------------------------------------
+ * author: 苟双旋
+ * date: 2011-6-7
+ * note:          
+ *
+ *---------------------------------------------------
+ * modificator:   
+ * date:          
+ * note:          
+ *
+ */
+package com.dcfs.teller.sparedata.executor.impl;
+
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.regex.Pattern;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.osgi.service.component.ComponentContext;
+
+import com.dcfs.teller.common.FrameGlobalConstant;
+import com.dcfs.teller.common.cmd.ServerSpareDataCmd;
+import com.dcfs.teller.common.data.AtomData;
+import com.dcfs.teller.common.data.CompositeData;
+import com.dcfs.teller.common.data.DataFactory;
+import com.dcfs.teller.common.data.Field;
+import com.dcfs.teller.common.exception.SystemException;
+import com.dcfs.teller.common.payload.IServiceResult;
+import com.dcfs.teller.common.payload.ServiceResultStatus;
+import com.dcfs.teller.sparedata.executor.ISpareDataDistill;
+import com.dcfs.teller.sparedata.factory.SpareDataFactory;
+import com.dcfs.teller.sparedata.manager.IInnerSpareDataManager;
+import com.dcfs.teller.sparedata.model.SpareDataBean;
+import com.dcfs.teller.sparedata.model.SpareDataItemBean;
+import com.dcfs.teller.sparedata.model.SpareParamBean;
+import com.dcfs.teller.sparedata.model.SpareServiceBean;
+import com.dcfs.teller.sparedata.model.StageSpareData;
+import com.dcfs.teller.spi.datacontainer.model.IDataModelReadOnlyAccessService;
+import com.dcfs.teller.spi.datastorage.service.IDatabaseAccessService;
+import com.dcfs.teller.spi.logic.service.ILogicProxyImmcyAccessService;
+
+/**
+ * 
+ * @author gou.shuangxuan
+ * @mailto <a href="mailto:gougsx_116_01@163.com">gou.shuangxuan</a>
+ * 
+ * 
+ *         修改为采用有序的组合数据承载备选数据. 付仁强 2012-9-21
+ */
+public class SpareDataDistill implements ISpareDataDistill {
+
+	private static String INDEX = "index.";
+
+	/**
+	 * 数据容器中DataModel分割符
+	 */
+	public final String DATASIGN = "-";
+	
+	private final String ROOT_STAGE = "rootStage";
+	
+	private final String COMMON_DATA_SUFFIX = "index";
+
+	private final String BRANCH_ID = "BRANCH_ID";
+
+	private final String USERID = "USERID";
+	
+	private final String USER_ID = "USER_ID";
+
+	private final String ORGID = "ORGID";
+	
+	/**
+	 * 数据库访问对象
+	 */
+	private IDatabaseAccessService databaseaccess;
+
+	/**
+	 * 数据容器访问对象
+	 * 20160525 yang.yanbin 将备选数据对数据容器的使用接口抽提为用于提供只读服务的接口，
+	 * 以此解除主控在并发处理备选数据事件和应用逻辑事件时对数据容器内临时区的竞争
+	 */
+	private IDataModelReadOnlyAccessService datamodelaccess;
+
+	/**
+	 * 逻辑代理访问对象
+	 */
+	private ILogicProxyImmcyAccessService logicproxy;
+	
+	/**
+	 * 实例化调试对象
+	 */
+	private static final Log log = LogFactory.getLog(SpareDataDistill.class);
+
+	public void setDataBase(IDatabaseAccessService access) {
+		this.databaseaccess = access;
+		this.databaseaccess.init("");
+	}
+
+	public void unsetDataBase(IDatabaseAccessService access) {
+		this.databaseaccess = null;
+	}
+
+	public void setDataModelAccessService(IDataModelReadOnlyAccessService access) {
+		this.datamodelaccess = access;
+	}
+
+	public void unsetDataModelAccessService(IDataModelReadOnlyAccessService access) {
+		this.datamodelaccess = null;
+	}
+
+	public void setProxyImmcyAccessService(ILogicProxyImmcyAccessService logicproxy){
+		this.logicproxy = logicproxy;
+	}
+	
+	public void unsetProxyImmcyAccessService(ILogicProxyImmcyAccessService logicproxy){
+		this.logicproxy = null;
+	}
+
+	@Override
+	public Map<String, String[]> distill(String temid, String domain,
+			String secne, String ref) {
+		if (log.isDebugEnabled())
+			log.debug(temid,"[system.spareData]打印模块开始获取备选数据....");
+		// 获取备选数据配置
+		IInnerSpareDataManager manager = SpareDataFactory.getInstance()
+				.getInnerSpareDataManager();
+		// 根据舞台标识获取其对应的配置信息
+		if (null == manager)
+			return null;
+		StageSpareData stageSpare = manager.getSpareData(domain);
+		StageSpareData rootSpare = manager.getSpareData(FrameGlobalConstant.ROOT_STAGE);
+		// 该舞台含有备选数据项
+		if (null != stageSpare) {
+			Map<String, String[]> result = new HashMap<String, String[]>();
+			// 备选数据项
+			SpareDataBean spare = stageSpare.getSpareDataBean(ref);
+			if(null == spare && null != rootSpare){
+				spare = rootSpare.getSpareDataBean(ref);
+			}
+			if (null != spare) {
+				// 静态数据
+				List<SpareDataItemBean> item = spare.getStaticItem();
+				if (null != item && item.size() > 0) {
+					setStaticShortSpareData(ref, item, result);
+				// 动态数据
+				} else if(null != spare.getSql()) {
+					if (null != this.databaseaccess)
+						setShortDynamicSpareData(temid, domain, secne, spare, result);
+				}
+				if (log.isDebugEnabled())
+					log.debug(temid,"[system.SpareDataCell]spare data:" + result);
+				return result;
+			} else {
+				if (log.isErrorEnabled())
+					log.error(temid,"[system.SpareDataCell]:not find spare data -> index:"
+							+ ref);
+			}
+		}
+		return null;
+	}
+	
+	
+	
+	@Override
+	public Map<String, String[]> distill(String temid, String domain,
+			CompositeData tranData, String ref) {
+		//添加该接口用于解决 公共打印时，获取带参的动态备选数据描述错误的问题     by haolq 20141010
+		if (log.isDebugEnabled())
+			log.debug(temid,"[system.spareData]打印模块开始获取备选数据....");
+		// 获取备选数据配置
+		IInnerSpareDataManager manager = SpareDataFactory.getInstance()
+				.getInnerSpareDataManager();
+		// 根据舞台标识获取其对应的配置信息
+		if (null == manager)
+			return null;
+		StageSpareData stageSpare = manager.getSpareData(domain);
+		StageSpareData rootSpare = manager.getSpareData(FrameGlobalConstant.ROOT_STAGE);
+		// 该舞台含有备选数据项
+		if (null != stageSpare) {
+			Map<String, String[]> result = new HashMap<String, String[]>();
+			// 备选数据项
+			SpareDataBean spare = stageSpare.getSpareDataBean(ref);
+			if(null == spare && null != rootSpare){
+				spare = rootSpare.getSpareDataBean(ref);
+			}
+			if (null != spare) {
+				// 静态数据
+				List<SpareDataItemBean> item = spare.getStaticItem();
+				if (null != item && item.size() > 0) {
+					setStaticShortSpareData(ref, item, result);
+				// 动态数据
+				} else if(null != spare.getSql()) {
+					if (null != this.databaseaccess)
+						setShortDynamicSpareData(temid, domain, tranData,spare, result);
+				}
+				if (log.isDebugEnabled())
+					log.debug(temid,"[system.SpareDataCell]spare data:" + result);
+				return result;
+			} else {
+				if (log.isErrorEnabled())
+					log.error(temid,"[system.SpareDataCell]:not find spare data -> index:"
+							+ ref);
+			}
+		}
+		return null;
+	}
+	
+	@Override
+	public Map<String, String[]> distill(String temid, String domain,
+			CompositeData tranData, Map<String, Object> param, String ref) {
+		//添加该接口用于解决 公共打印时，获取带参的动态备选数据描述错误的问题     by haolq 20141010
+		if (log.isDebugEnabled())
+			log.debug(temid,"[system.spareData]打印模块开始获取备选数据....");
+		// 获取备选数据配置
+		IInnerSpareDataManager manager = SpareDataFactory.getInstance()
+				.getInnerSpareDataManager();
+		// 根据舞台标识获取其对应的配置信息
+		if (null == manager)
+			return null;
+		StageSpareData stageSpare = manager.getSpareData(domain);
+		StageSpareData rootSpare = manager.getSpareData(FrameGlobalConstant.ROOT_STAGE);
+		// 该舞台含有备选数据项
+		if (null != stageSpare) {
+			Map<String, String[]> result = new LinkedHashMap<String, String[]>();
+			// 备选数据项
+			SpareDataBean spare = stageSpare.getSpareDataBean(ref);
+			if(null == spare && null != rootSpare){
+				spare = rootSpare.getSpareDataBean(ref);
+			}
+			if (null != spare) {
+				// 静态数据
+				List<SpareDataItemBean> item = spare.getStaticItem();
+				if (null != item && item.size() > 0) {
+					setStaticShortSpareData(ref, item, result);
+				// 动态数据
+				} else if (null != spare.getSql()) {
+					if (null != this.databaseaccess) {
+						if (param != null && param.size() > 0)
+							this.setDynamicSpareData(temid, spare,result, param);
+						else
+							this.setShortDynamicSpareData(temid, domain,tranData, spare, result);
+					}
+				}
+				if (log.isDebugEnabled())
+					log.debug(temid,"[system.SpareDataCell]spare data:" + result);
+				return result;
+			} else {
+				if (log.isErrorEnabled())
+					log.error(temid,"[system.SpareDataCell]:not find spare data -> index:"
+							+ ref);
+			}
+		}
+		return null;
+	}
+
+	
+	/*public CompositeData distill(ServerSpareDataCmd cmd) {
+		String logindex = cmd.getTerminal();
+		if (log.isDebugEnabled())
+			log.debug(logindex,"[system.spareData]开始获取备选数据....");
+		// 获取备选数据配置
+		IInnerSpareDataManager manager = SpareDataFactory.getInstance()
+				.getInnerSpareDataManager();
+		// 根据舞台标识获取其对应的配置信息
+		if (null == manager)
+			return null;
+		StageSpareData stageSpare = manager.getSpareData(cmd.getStageID());
+		StageSpareData rootSpare = manager.getSpareData(FrameGlobalConstant.ROOT_STAGE);
+		// 该舞台含有备选数据项
+		if (null != stageSpare) {
+			// 备选数据索引
+			String ref = cmd.getRef();
+			// 备选数据项
+			SpareDataBean spare = stageSpare.getSpareDataBean(ref);
+			if(null == spare && null != rootSpare){
+				spare = rootSpare.getSpareDataBean(ref);
+			}
+			if (null != spare) {
+				CompositeData result = DataFactory.getOrderCompositeData();
+				result.addField(Common.INDEX, DataFactory.getStringField(ref));
+				// 静态数据
+				List<SpareDataItemBean> item = spare.getStaticItem();
+				if (null != item && item.size() > 0) {
+					setStaticSpareData(item, result);
+				// 动态数据
+				} else if(null != spare.getSql()){
+					if (null != this.databaseaccess)
+						setDynamicSpareData(cmd, spare, result);
+				// 服务
+				} else {
+					if(null != this.logicproxy)
+						setServiceSpareData(cmd, ref,spare.getService(),result);
+						//2014-9-29wangcmd增加，为的是能够让基于服务的备选数据能区分出静态和动态类型
+						String spareType="1";
+						if(spare.getType()!=null&&!"".equals(spare.getType())){
+							spareType=spare.getType();
+						}
+						result.addField(Common.SPARETYPE, DataFactory.getStringField(spareType));
+				}
+				if (log.isDebugEnabled())
+					log.debug(logindex,"[system.SpareDataCell]spare data:" + result);
+				return result;
+			} else {
+				if (log.isErrorEnabled())
+					log.error(logindex,"[system.SpareDataCell]:not find spare data -> index:"
+							+ ref);
+			}
+		}
+		return null;
+	}
+*/
+	/**
+	 * 处理查询动态数据时的产出信息
+	 * 
+	 * @param cmd
+	 * @return
+	 */
+	private Map<String, Object> getExecuteQueryParam(ServerSpareDataCmd cmd,
+			SpareParamBean sqlbean) {
+		String sys_index = null;
+		Map<String, String> cmdparam = cmd.getParams();
+		Map<String, String> sqlparam = sqlbean.getParam();
+		Map<String,Object> attach = cmd.getAttach();
+		if(null != attach && attach.containsKey(FrameGlobalConstant.SYS_LOGINENTRY_NAME)){
+			Object obj = attach.get(FrameGlobalConstant.SYS_LOGINENTRY_NAME);
+			if(null != obj && !obj.equals(""))
+				sys_index = (String)obj + ".";
+		}
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.putAll(cmdparam);
+		params.put(FrameGlobalConstant.STAGEID, cmd.getStageID());
+		initDataModel(cmd);
+		if (sqlparam != null && sqlparam.size() > 0) {
+			for (String key : sqlparam.keySet()) {
+				String pvalue = getParamValue(cmdparam, key,sys_index);
+				if (pvalue != null) {
+					params.put(sqlparam.get(key), pvalue);
+				} else {
+					String value = datamodelaccess.getShareDataValueString(key);
+					if (value != null) {
+						params.put(sqlparam.get(key), value);
+					}
+				}
+			}
+		}
+		return params;
+	}
+	
+	/**
+	 * 处理查询动态数据时的参数信息，从指定场景或者共享数据中获取
+	 * 
+	 * @param cmd
+	 * @return
+	 */
+	private Map<String, Object> getShortExecuteQueryParam(String temid, String domain,
+			String scene,SpareParamBean sqlbean) {
+		Map<String, String> sqlparam = sqlbean.getParam();
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put(FrameGlobalConstant.STAGEID,domain);
+		initShortDataModel(temid,domain,scene);
+		if (sqlparam != null && sqlparam.size() > 0) {
+			for (String key : sqlparam.keySet()) {
+				/* Modify Start by yangpengc 2013-09-09 */
+				/* 处理BUG(975), 数据网格在导出时，没有处理以index.开始的备选数据 */
+				/*
+				 * 注释掉以前的处理逻辑
+				String controlValue = datamodelaccess
+						.getControlValueString(key);
+				*/
+				String controlValue = null;
+				if (key.startsWith(INDEX)) {
+					controlValue = datamodelaccess.getShareDataValueString(
+							key.substring(6, key.length()));
+				} else {
+					controlValue = datamodelaccess.getControlValueString(key);
+				}
+				/* Modify End by yangpengc 2013-09-09 */
+				if (controlValue != null) {
+					params.put(sqlparam.get(key), controlValue);
+				}
+			}
+		}
+		return params;
+	}
+	
+	
+	/**
+	 * 处理查询动态数据时的参数信息，从传入的交易数据或者共享数据中获取
+	 * 
+	 * @param cmd
+	 * @return
+	 * 用于解决 公共打印时，获取带参的动态备选数据描述错误的问题     by haolq 20141010
+	 */
+	private Map<String, Object> getShortExecuteQueryParam(String temid, String domain,
+			CompositeData tranData,SpareParamBean sqlbean) {
+		Map<String, String> sqlparam = sqlbean.getParam();
+		Map<String, Object> params = new HashMap<String, Object>();
+		params.put(FrameGlobalConstant.STAGEID,domain);
+		if (sqlparam != null && sqlparam.size() > 0) {
+			for (String key : sqlparam.keySet()) {
+				
+				String controlValue = null;
+				if (key.startsWith(INDEX)) {
+					controlValue = datamodelaccess.getShareDataValueString(
+							key.substring(6, key.length()));
+				}else if (".*".equals(key)) {
+					//目前打印获取备选数据时，无法获取不指定控件ID的备选数据参数
+					controlValue = null;
+				}else {
+					//若key值为xx.xx则认为是获取结构体中的数据
+					String[] keys = key.split("\\.");
+					CompositeData dataTemp = tranData;
+					for (int i = 0; i < keys.length; i++) {
+						if (i==keys.length-1) {
+							controlValue = dataTemp.getField(keys[i])==null?null:dataTemp.getField(keys[i]).strValue();
+						}else {
+							if ("".equals(keys[i])) {
+								break;
+							}
+							dataTemp = dataTemp.getStruct(keys[i]);
+							if (dataTemp == null) {
+								break;
+							}
+						}
+					}
+				}
+				if (controlValue != null) {
+					params.put(sqlparam.get(key), controlValue);
+				}
+			}
+		}
+		return params;
+	}
+
+	/**
+	 * 初始化数据容器参数
+	 * 
+	 * @param cmd
+	 */
+	private void initDataModel(ServerSpareDataCmd cmd) {
+		Map<String, Object> map = new ConcurrentHashMap<String, Object>();
+		map.put(FrameGlobalConstant.TERMINAL, cmd.getTerminal());
+		map.put(FrameGlobalConstant.STAGEID, cmd.getStageID());
+		map.put(FrameGlobalConstant.SCENEID, cmd.getSceneInstanceID());
+		Map<String,Object> attach = cmd.getAttach();
+		if(null != attach && attach.containsKey(FrameGlobalConstant.SYS_LOGINENTRY_NAME)){
+			Object obj = attach.get(FrameGlobalConstant.SYS_LOGINENTRY_NAME);
+			if(null != obj && !obj.equals(""))
+				map.put(FrameGlobalConstant.INIT_SCENE,(String)obj);
+		}
+		if (cmd.getAttach().containsKey(FrameGlobalConstant.MAPPINGDATA)) {
+			map.put(FrameGlobalConstant.MAPPINGDATA,
+					cmd.getAttach().get(FrameGlobalConstant.MAPPINGDATA));
+		}
+		if (datamodelaccess != null) {
+			datamodelaccess.init(map);
+		}
+	}
+	
+	/**
+	 * 初始化数据容器参数
+	 * 
+	 * @param cmd
+	 */
+	private void initShortDataModel(String temid,String domain,String scene) {
+		Map<String, Object> map = new ConcurrentHashMap<String, Object>();
+		map.put(FrameGlobalConstant.TERMINAL, temid);
+		map.put(FrameGlobalConstant.STAGEID, domain);
+		map.put(FrameGlobalConstant.SCENEID, scene);
+		if (datamodelaccess != null) {
+			datamodelaccess.init(map);
+		}
+	}
+
+	/**
+	 * 从cmdparam中获取复核key描述的值。如果没有在指令中找到对应的值，则查询数据容器，获取对应的值
+	 * 
+	 * @param cmdparam
+	 * @param key
+	 *            可以是个正则表达式。
+	 * @return
+	 */
+	private String getParamValue(Map<String, String> cmdparam, String key,String index) {
+		String value = null;
+		if (key.startsWith(index)) {
+			value = datamodelaccess.getShareDataValueString(key.substring(index.length(),
+					key.length()));
+		} else {
+			if (cmdparam.containsKey(key)) {
+				value = cmdparam.get(key);
+			} else {
+				for (String v : cmdparam.values()) {
+					if (Pattern.matches(key, v)) {
+						value = v;
+						break;
+					}
+				}
+			}
+
+			if ((null == value || value.equals("")) && datamodelaccess != null) {
+				String controlValue = datamodelaccess
+						.getControlValueString(key);
+				if (controlValue != null && !controlValue.equals("")) {
+					value = controlValue;
+				}
+			}
+		}
+		return value;
+	}
+
+	/**
+	 * 设置静态备选数据
+	 * 
+	 * @param item
+	 * @param result
+	 */
+	private void setStaticShortSpareData(String ref,
+			List<SpareDataItemBean> item,
+			Map<String, String[]> map) {
+		if (log.isDebugEnabled())
+			log.debug("[system.spareData]备选数据为静态....");
+		for (SpareDataItemBean bean : item) {
+			String[] result = new String[2];
+			result[0] = bean.getDes();
+			result[1] = bean.getShortdes();
+			map.put(bean.getKey(), result);
+		}
+		if (log.isDebugEnabled()) {
+			log.debug("[system.spareData]静态备选数据装载完成....");
+		}
+	}
+	
+	/**
+	 * 设置静态备选数据
+	 * 
+	 * @param item
+	 * @param result
+	 */
+	private void setStaticSpareData(List<SpareDataItemBean> item,
+			CompositeData result) {
+		if (log.isDebugEnabled())
+			log.debug("[system.spareData]备选数据为静态....");
+		CompositeData cd = DataFactory.getOrderCompositeData();
+		CompositeData attribute = DataFactory.getOrderCompositeData();
+
+		for (SpareDataItemBean bean : item) {
+			cd.addField(bean.getKey(),
+					DataFactory.getStringField(bean.getDes()));
+			if (null != bean.getIcon() && !bean.getIcon().equals("")) {
+				attribute.addField(bean.getKey(),
+						DataFactory.getStringField(bean.getIcon()));
+			}
+		}
+		if (attribute.size() > 0) {
+			cd.addStruct(Common.ATTRIBUTE, attribute);
+		}
+		if (log.isDebugEnabled()) {
+			log.debug("[system.spareData]静态备选数据：" + cd);
+		}
+		// 封装数据内容
+		result.addStruct(Common.CONTENT, cd);
+		// 非过滤数据
+		result.addField(Common.SPARETYPE, DataFactory.getStringField("0"));
+	}
+
+	/**
+	 * 获取动态备选数据描述,备选数据参数从指定场景或共享数据中获取
+	 * @param sqlbean
+	 * @param keylist
+	 * @param map
+	 */
+	private void setShortDynamicSpareData(String temid, String domain,
+			String secne,SpareDataBean spare,Map<String, String[]> map) {
+		if (log.isDebugEnabled())
+			log.debug(temid, "[system.spareData]打印模块开始调用备选数据状态为动态....");
+		SpareParamBean sqlbean = spare.getSql();
+		if (null != sqlbean) {
+			Map<String, Object> params = getShortExecuteQueryParam(temid,
+					domain, secne, sqlbean);
+			this.setDynamicSpareData(temid, spare, map, params);
+		}
+	}
+	
+	
+	/**
+	 * 获取动态备选数据描述,备选数据参数从传入的交易数据或共享数据中获取
+	 * @param temid
+	 * @param domain
+	 * @param trandata
+	 * @param spare
+	 * @param map
+	 */
+	private void setShortDynamicSpareData(String temid, String domain,
+			CompositeData trandata, SpareDataBean spare,Map<String, String[]> map) {
+		if (log.isDebugEnabled())
+			log.debug(temid, "[system.spareData]获取动态备选数据....");
+		SpareParamBean sqlbean = spare.getSql();
+		if (null != sqlbean) {
+			Map<String, Object> params = getShortExecuteQueryParam(temid,
+					domain, trandata, sqlbean);
+			this.setDynamicSpareData(temid, spare, map, params);
+		}
+	}
+	 
+	private void setDynamicSpareData(String temid, SpareDataBean spare,
+			Map<String, String[]> map, Map<String, Object> params) {
+		List<Map<String, Object>> list;
+		// 是否需要分页提取数据
+		long bg = System.currentTimeMillis();
+		try {
+			//wangcmd 走自定义数据源 2017-1-16 
+			String datasourceId = spare.getDatasourceid();
+			String paramkey =spare.getSql().getKey();
+			if(datasourceId!=null &&!"".equals(datasourceId)){
+				list = this.databaseaccess.query(datasourceId,paramkey, params);
+			}else{
+				//走默认数据源
+				list = this.databaseaccess.query(paramkey, params);
+			}
+			long ed = System.currentTimeMillis();
+			if (log.isInfoEnabled()) {
+				log.info(temid,
+						"[system.time]InteractiveFrame_SpareData operator database time["
+								+ (ed - bg) + "]ms thread id:"
+								+ Thread.currentThread().getName());
+			}
+			if (null != list && list.size() > 0) {
+				for (Map<String, Object> m : list) {
+					Iterator<String> iterator = m.keySet().iterator();
+					if (m.size() == 2) {
+						String key = (String) m.get(iterator.next());
+						String[] str = new String[3];
+						str[0] = (String) m.get(iterator.next());
+						map.put(key, str);
+					} else if (m.size() == 3) {
+						String key = (String) m.get(iterator.next());
+						String[] str = new String[3];
+						str[0] = (String) m.get(iterator.next());
+						str[1] = (String) m.get(iterator.next());
+						map.put(key, str);
+					} else if (m.size() == 4) {
+						String key = (String) m.get(iterator.next());
+						String[] str = new String[3];
+						str[0] = (String) m.get(iterator.next());
+						str[1] = (String) m.get(iterator.next());
+						str[2] = (String) m.get(iterator.next());
+						map.put(key, str);
+					}
+				}
+				if (log.isDebugEnabled()) {
+					log.debug(temid, "[system.spareData]打印动态备选数据装载成功....");
+				}
+			}
+		} catch (Exception e) {
+			log.error(temid, "[system.error]查询备选数据时异常：" + e);
+			SystemException se = new SystemException("15004");
+			throw se;
+		}
+	}
+
+	/**
+	 * 设置由服务查找到的被选数据项
+	 * @param cmd
+	 * @param ref
+	 * @param bean
+	 * @param map
+	 */
+	private void setServiceSpareData(ServerSpareDataCmd cmd, String ref,SpareServiceBean bean,
+			CompositeData result){
+		String logindex = cmd.getTerminal();
+		if (log.isDebugEnabled())
+			log.debug(logindex,"[system.spareData]备选数据为服务提供....");
+		// 获取的备选数据类型是过滤还是非过滤数据（0非过滤；1过滤）
+		if (null != bean) {
+			// 获取备选数据
+			try {
+				CompositeData request = encapsulationRequest(cmd,bean);
+				IServiceResult sr = this.logicproxy.execute(request);
+				if(sr.getServiceStatus() == ServiceResultStatus.SUCCESS){
+					CompositeData data = sr.getResult();
+					if(null != data){
+						// yang.yanbin 由于通过组合服务获取的备选数据无法放到第一层CD中，
+						// 所以采取约定第二层放置备选数据的CD的ID为ref的方式，在此处取出，
+						// 同时也过滤掉了远程服务结果里的SYS_HEAD，返回纯粹的备选数据内容。
+						AtomData content = data.getObject(ref);
+						if (content != null && content.isStruct()) {
+							result.addStruct(Common.CONTENT,
+									(CompositeData) content);
+						} else {
+							result.addStruct(Common.CONTENT, data);
+						}
+					}
+				}
+			} catch (Exception e) {
+				log.error(logindex,"[system.error]查询备选数据时异常：" + e);
+				SystemException se = new SystemException("15004");
+				throw se;
+			}
+		}
+		//2014-9-29wangcmd修改，备选数据的类型又外部决定，不在这写死
+		//result.addField(Common.SPARETYPE, DataFactory.getStringField("0"));
+	}
+	
+	/**
+	 * 封装请求数据
+	 * @param cmd
+	 * @return
+	 */
+	private CompositeData encapsulationRequest(ServerSpareDataCmd cmd,SpareServiceBean bean){
+		AtomData data = this.datamodelaccess.getRequestAtomData(cmd.getStageID(),
+				cmd.getTerminal() + DATASIGN
+						+ cmd.getSceneInstanceID());
+		CompositeData logindata = (CompositeData) this.datamodelaccess.getRequestAtomData(
+				ROOT_STAGE, cmd.getTerminal() + DATASIGN
+						+ COMMON_DATA_SUFFIX);
+		if(log.isDebugEnabled())
+			log.debug(cmd.getTerminal(),"[system.sparedata] 备选数据访问服务时从数据容器中获取到请求数据...");
+		if (null == data)
+			return null;
+		CompositeData cd =  (CompositeData) data;
+		CompositeData head = DataFactory.getCompositeData();
+		//设定柜员标识
+		if (logindata.contains(USERID)) {
+			head.addField(USER_ID, logindata.getField(USERID));
+		}
+		//设定机构标识
+		if (logindata.contains(ORGID)) {
+			head.addField(BRANCH_ID, logindata.getField(ORGID));
+		}
+		head.addField(FrameGlobalConstant.SERVICE_CODE, DataFactory.getStringField(bean.getServicecode()));
+		head.addField(FrameGlobalConstant.MESSAGE_TYPE, DataFactory.getStringField(bean.getMessagetype()));
+		head.addField(FrameGlobalConstant.MESSAGE_CODE, DataFactory.getStringField(bean.getMessagecode()));
+		String scene = cmd.getSceneInstanceID();
+		if(null != scene && scene.indexOf("_") > 0){
+			scene = scene.substring(0,scene.indexOf("_"));
+		}
+		head.addField(FrameGlobalConstant.PROGRAM_ID, DataFactory.getStringField(scene));
+		cd.addStruct(FrameGlobalConstant.SYS_HEAD, head);
+		//wangcm add 将参数放置进去
+		Map<String, String> paramMap=bean.getParam();
+		if(paramMap!=null&&!paramMap.isEmpty()){
+			for (String key : paramMap.keySet()) {
+				AtomData atomData =	this.getData(key, cd);
+				if(atomData!=null){
+					cd.addObject(paramMap.get(key),atomData);
+				}
+			}
+		}
+		return cd;
+	}
+	
+	/**
+	 * 设置动态备选数据
+	 * 
+	 * @param cmd
+	 * @param sqltools
+	 * @param sqlbean
+	 * @param result
+	 */
+	private void setDynamicSpareData(ServerSpareDataCmd cmd,
+			SpareDataBean spare, CompositeData result) {
+		String logindex = cmd.getTerminal();
+		if (log.isDebugEnabled())
+			log.debug(logindex,"[system.spareData]备选数据为动态....");
+		// 获取的备选数据类型是过滤还是非过滤数据（0非过滤；1过滤）
+		String status = "0";
+		// 是否为联动请求
+		if (null != cmd.getSrcElementID()) {
+			result.addField(Common.ID,
+					DataFactory.getStringField(cmd.getSrcElementID()));
+		}
+		SpareParamBean sqlbean = spare.getSql();
+		if (null != sqlbean) {
+			// 获取备选数据
+			try {
+				List<Map<String, Object>> list = null;
+				Map<String, Object> params = getExecuteQueryParam(cmd, sqlbean);
+				// 数据是否过滤
+				String inputString = cmd.getInputString();
+				if (inputString != null && !inputString.equals("")) {
+					params.put("INPUTSTRING", "%" + cmd.getInputString() + "%");
+				}
+				if (!params.isEmpty()) {
+					status = "1";
+				}
+				// 是否需要分页提取数据
+				long bg = System.currentTimeMillis();
+				String datasourceId= spare.getDatasourceid();
+				String paramkey=spare.getSql().getKey();
+				if (cmd.isPaging()) {
+					//wangcmd 走自定义数据源 2017-1-16 
+					if(datasourceId!=null && !"".equals(datasourceId)){
+						list = this.databaseaccess.query(datasourceId,paramkey, params,
+								cmd.getCursor(), cmd.getSize());
+					}else{
+						//走默认数据源
+						list = this.databaseaccess.query(paramkey, params,
+							cmd.getCursor(), cmd.getSize());
+					}
+				} else {
+					if(datasourceId!=null && !"".equals(datasourceId)){
+						list = this.databaseaccess.query(datasourceId,paramkey, params);
+					}else{
+						//走默认数据源
+						list = this.databaseaccess.query(paramkey, params);
+					}
+				}
+				long ed = System.currentTimeMillis();
+				if (log.isInfoEnabled()) {
+					log.info(logindex,"[system.time]InteractiveFrame_SpareData operator database time["
+							+ (ed - bg)
+							+ "]ms thread id:"
+							+ Thread.currentThread().getName());
+				}
+				if (null != list && list.size() > 0) {
+					CompositeData cd = DataFactory.getOrderCompositeData();
+					for (Map<String, Object> m : list) {
+						Iterator<String> iterator = m.keySet().iterator();
+						cd.addField((String) m.get(iterator.next()),
+								DataFactory.getField(m.get(iterator.next())));
+					}
+					if (log.isDebugEnabled()) {
+						log.debug(logindex,"[system.spareData]动态备选数据：" + cd);
+					}
+					result.addStruct(Common.CONTENT, cd);
+				}
+			} catch (Exception e) {
+				log.error(logindex,"[system.error]查询备选数据时异常：" , e);
+				SystemException se = new SystemException("15004");
+				throw se;
+			}
+		}
+		result.addField(Common.SPARETYPE, DataFactory.getStringField(status));
+	}
+
+	/**
+	 * 激活
+	 * 
+	 * @param context
+	 */
+	protected void activate(ComponentContext context) {
+		if (log.isInfoEnabled())
+			log.info("[system.sparedata]:ISpareDataDistill be calling");
+		SpareDataFactory.getInstance().setSingleObject(
+				ISpareDataDistill.class.getSimpleName(), this);
+	}
+
+	/**
+	 * 停止
+	 * 
+	 * @param context
+	 * @throws Exception
+	 */
+	protected void deactivate(ComponentContext context) throws Exception {
+		if (log.isInfoEnabled())
+			log.info("[system.sparedata]:ISpareDataDistill be deactivate");
+	}
+	
+	/**
+	 * 该方法判断输入的表达式如果表示常量字符串，则将该字符串封装为Field返回，
+	 * 否则用表达式在交易数据中匹配，并返回匹配的结果
+	 * 
+	 * @param data
+	 * @return
+	 */
+	private AtomData getData(String expression, CompositeData tranData) {
+		AtomData result = null;
+		String constData = this.getConstContent(expression);
+
+		if (constData != null) {
+			result = DataFactory.getStringField(constData);
+		} else {
+			result = tranData.getObject(expression);
+		}
+
+		return result;
+	}
+
+	private String getConstContent(String expression) {
+		String constStr = null;
+		String[] constCont = expression.split("'");
+		if (constCont != null && constCont.length > 1)
+			constStr = constCont[1];
+
+		return constStr;
+	}
+	
+	
+	 private void setServiceSpareData_pm(ServerSpareDataCmd cmd, String spareID, SpareServiceBean bean, CompositeData result)
+	    {
+	        String logindex = cmd.getTerminal();
+	        if(log.isDebugEnabled())
+	            log.debug((new StringBuilder(String.valueOf(logindex))).append(" [setServiceSpareData_pm]\u5907\u9009\u6570\u636E\u4E3A\u670D\u52A1\u63D0\u4F9Bid=").append(spareID).toString());
+	        if(bean != null)
+	            try
+	            {
+	                CompositeData request = encapsulationRequest_pm(cmd, bean, spareID);
+	                IServiceResult sr = logicproxy.execute(request);
+	                if(sr.getServiceStatus() == ServiceResultStatus.SUCCESS)
+	                {
+	                    CompositeData data = sr.getResult();
+	                    if(data != null)
+	                        result.addStruct("CONTENT", data);
+	                }
+	            }
+	            catch(Exception e)
+	            {
+	                log.error((new StringBuilder(String.valueOf(logindex))).append(" [system.error]\u67E5\u8BE2\u5907\u9009\u6570\u636E\u65F6\u5F02\u5E38\uFF1A").append(e).toString());
+	                SystemException se = new SystemException("123789000");
+	                throw se;
+	            }
+	        result.addField("TYPE", DataFactory.getStringField("0"));
+	    }
+
+	    private CompositeData encapsulationRequest_pm(ServerSpareDataCmd cmd, SpareServiceBean bean, String spareID)
+	    {
+	        String bb = (new StringBuilder(String.valueOf(cmd.getTerminal()))).append("-").append(cmd.getSceneInstanceID()).toString();
+	        AtomData data = datamodelaccess.getRequestAtomData(cmd.getStageID(), bb);
+	        CompositeData logindata = (CompositeData)datamodelaccess.getRequestAtomData("rootStage", (new StringBuilder(String.valueOf(cmd.getTerminal()))).append("-").append("index").toString());
+	        if(log.isDebugEnabled())
+	            log.debug((new StringBuilder(String.valueOf(cmd.getTerminal()))).append(" [encapsulationRequest_pm] \u5907\u9009\u6570\u636E\u8BBF\u95EE\u670D\u52A1\u65F6\u4ECE\u6570\u636E\u5BB9\u5668\u4E2D\u83B7\u53D6\u5230\u8BF7\u6C42\u6570\u636E...").toString());
+	        if(data == null)
+	            return null;
+	        CompositeData cd = (CompositeData)data;
+	        CompositeData head = DataFactory.getCompositeData();
+	        if(logindata.contains("USERID"))
+	            head.addField("USER_ID", logindata.getField("USERID"));
+	        if(logindata.contains("ORGID"))
+	            head.addField("BRANCH_ID", logindata.getField("ORGID"));
+	        head.addField("SERVICE_CODE", DataFactory.getStringField(bean.getServicecode()));
+	        head.addField("MESSAGE_TYPE", DataFactory.getStringField(bean.getMessagetype()));
+	        head.addField("MESSAGE_CODE", DataFactory.getStringField(bean.getMessagecode()));
+	        String scene = cmd.getSceneInstanceID();
+	        if(scene != null && scene.indexOf("_") > 0)
+	            scene = scene.substring(0, scene.indexOf("_"));
+	        head.addField("PROGRAM_ID", DataFactory.getStringField(scene));
+	        cd.addStruct("SYS_HEAD", head);
+	        cd.addField("SPARE_ID", DataFactory.getStringField(spareID));
+	        return cd;
+	    }
+	
+	    private void setStaticSpareDataNew(List item, CompositeData result)
+	    {
+	        if(log.isDebugEnabled())
+	            log.debug("[system.spareData]\u5907\u9009\u6570\u636E\u542B\u6709\u9759\u6001....");
+	        CompositeData cd = DataFactory.getOrderCompositeData();
+	        CompositeData attribute = DataFactory.getOrderCompositeData();
+	        for(Iterator localIterator = item.iterator(); localIterator.hasNext();)
+	        {
+	            SpareDataItemBean bean = (SpareDataItemBean)localIterator.next();
+	            cd.addField(bean.getKey(), DataFactory.getStringField(bean.getDes()));
+	            if(bean.getIcon() == null || bean.getIcon().equals(""))
+	                attribute.addField(bean.getKey(), DataFactory.getStringField(bean.getIcon()));
+	        }
+
+	        if(attribute.size() > 0)
+	            cd.addStruct("ATTRIBUTE", attribute);
+	        if(log.isDebugEnabled())
+	            log.debug((new StringBuilder("[system.spareData]\u9759\u6001\u5907\u9009\u6570\u636E\uFF1A")).append(cd).toString());
+	        result.addStruct("CONTENT", cd);
+	    }
+
+	    protected void AdditionResult(CompositeData result, CompositeData addition_result)
+	    {
+	        CompositeData content = result.getStruct("CONTENT");
+	        CompositeData addition_content = addition_result.getStruct("CONTENT");
+	        if(addition_content.size() > 0)
+	        {
+	            Iterator<?> iterator = addition_content.iterator();
+	            String key = null;
+	            AtomData atomData = null;
+	            while(iterator.hasNext()) 
+	            {
+	                key = (String)iterator.next();
+	                atomData = addition_content.getObject(key);
+	                if(atomData.isField())
+	                    content.addField(key, (Field)atomData);
+	            }
+	        }
+	        result.addStruct("CONTENT", content);
+	    }
+	
+	    public CompositeData distill(ServerSpareDataCmd cmd)
+	    {
+	      String logindex = cmd.getTerminal();
+	      if (log.isDebugEnabled())
+	        log.debug(logindex + " [system.spareData]开始获取备选数据....");
+	      IInnerSpareDataManager manager = SpareDataFactory.getInstance().getInnerSpareDataManager();
+	      if (null == manager)
+	        return null;
+	      StageSpareData stageSpare = manager.getSpareData(cmd.getStageID());
+	      StageSpareData rootSpare = manager.getSpareData("rootStage");
+	      if (null != stageSpare) 
+	      {	
+	        String ref = cmd.getRef();
+	        SpareDataBean spare = stageSpare.getSpareDataBean(ref);
+	        if ((null == spare) && (null != rootSpare)){
+	          spare = rootSpare.getSpareDataBean(ref);
+	        }
+	        if (null != spare) {
+	          CompositeData addition_result; 
+	          CompositeData result = DataFactory.getOrderCompositeData();
+	          result.addField("INDEX", DataFactory.getStringField(ref));
+
+	          List item = spare.getStaticItem();
+	          if ((item != null) && (item.size() > 0) && (spare.getSql() != null))
+	          {
+	            if (log.isDebugEnabled())
+	              log.debug("SpareSql::" + spare.getSql().getKey());
+
+	            if (this.databaseaccess != null)
+	            {
+	          	//动态SQLPLIST,只有动态plist才能每次更新
+	          	  log.debug("[动态SQLPLIST,只有动态plist才能每次更新1]..");
+	              setDynamicSpareData(cmd, spare, result);
+	            }
+	            addition_result = DataFactory.getOrderCompositeData();
+	            setStaticSpareDataNew(item, addition_result);
+	            AdditionResult(result, addition_result);
+	          }
+	          else if ((null != item) && (item.size() > 0))
+	          {
+	          	//静态plist
+	          	log.debug("[静态plist]...");
+	            setStaticSpareData(item, result);
+	          }
+	          else if (null != spare.getSql())
+	          	//动态
+	          {
+	            if (null != this.databaseaccess)
+	            { 
+	          	//动态SQLPLIST,只有动态plist才能每次更新
+	          	  log.debug("[动态SQLPLIST,只有动态plist才能每次更新2...]");
+	              setDynamicSpareData(cmd, spare.getSql(), result);
+	            }
+	            if ((spare.getType() != null) && (spare.getType().equals("3")))
+	            {
+	          	  //动态的plist可能会有附加的服务执行接口，需要合并数据
+	              addition_result = DataFactory.getOrderCompositeData();
+	              addition_result.addField("INDEX", DataFactory.getStringField(ref));
+	              setServiceSpareData_pm(cmd, spare.getId(), spare.getService(), addition_result);
+	              AdditionResult(result, addition_result);
+	            }
+	          }
+	          else 
+	  	{
+	  		if (null != this.logicproxy)
+	  	        {
+	  			//由服务提供数据的PLIST
+	  			log.debug("[由服务提供数据的PLIST]...");
+	  	          setServiceSpareData(cmd, ref, spare.getService(), result);
+	  	        }
+	  		 String spareType = "1";
+	            if ((spare.getType() != null) && (!("".equals(spare.getType())))) {
+	              spareType = spare.getType();
+	             }
+	            result.addField("TYPE", DataFactory.getStringField(spareType));
+	  	}
+	          if (log.isDebugEnabled())
+	            log.debug(logindex + " [system.SpareDataCell]spare data:" + result);
+	          return result;
+	        }
+	        if (log.isErrorEnabled())
+	          log.error(logindex + " [system.SpareDataCell]:not find spare data -> index:" + ref);
+
+	      }
+	      return null;
+	    }
+}

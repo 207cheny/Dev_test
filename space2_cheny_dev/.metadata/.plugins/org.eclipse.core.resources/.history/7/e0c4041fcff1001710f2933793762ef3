@@ -1,0 +1,40 @@
+package com.dcfs.teller.svrfunction;
+
+import java.util.Map;
+
+import com.dcfs.teller.spi.datacontainer.model.IDataModelAccessService;
+import com.dcfs.teller.spi.datacontainer.model.IExtendDataModelAccessService;
+import com.dcfs.teller.spi.datacontainer.model.RequestParam;
+import com.dcfs.teller.spi.event.eventlogic.IEventControlLogic;
+import com.dcfs.teller.spi.logic.service.ILogicProxyAccessService;
+
+
+public class ChangeObjectStatus implements IEventControlLogic{
+
+	private static final long serialVersionUID = 1L;
+
+	/**
+	 * 更改控件属性
+	 * 
+	 */
+	@Override
+	public void logic(ILogicProxyAccessService logicaccess,
+			IExtendDataModelAccessService datamodal) {
+		Object params = datamodal.getParam(RequestParam.ACTION_PARAM);
+		if(params instanceof Map<?,?>){
+			@SuppressWarnings("unchecked")
+			Map<String,String> map = (Map<String, String>) params;
+			String ids = map.get("IDS");
+			String type = map.get("TYPE");
+			String status = map.get("STATUS");
+			DataViewUtils.setMulFiledStatus(datamodal, ids.split(","), type, status);
+		}
+	}
+
+	@Override
+	public void logic(ILogicProxyAccessService arg0,
+			IDataModelAccessService arg1) {
+	}
+
+	
+}

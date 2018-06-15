@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.6"?><target name="New Target">
+<locations>
+<location path="E:\ZG_Source\Project\SmartTeller9_SSO_Auth\frame_work" type="Directory"/>
+<location path="E:\ZG_Source\Project\SmartTeller9_SSO_Auth\frame_work\trans" type="Directory"/>
+</locations>
+</target>

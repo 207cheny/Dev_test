@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="quartz-2.2.3.jar" sourcepath="C:/Users/Dcits/AppData/Local/Temp/.org.sf.feeling.decompiler1523236467769/source/quartz-2.2.3-sources-1523344228010.jar"/>
+	<classpathentry kind="lib" path="quartz-jobs-2.2.3.jar"/>
+	<classpathentry kind="lib" path="log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="slf4j-log4j12-1.7.25.jar"/>
+	<classpathentry kind="lib" path="slf4j-api-1.7.25.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

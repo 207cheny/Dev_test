@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.EquinoxLauncher">
+<booleanAttribute key="append.args" value="true"/>
+<booleanAttribute key="automaticAdd" value="true"/>
+<booleanAttribute key="automaticValidate" value="true"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="false"/>
+<stringAttribute key="configLocation" value="${workspace_loc}/.metadata/.plugins/org.eclipse.pde.core/New_configuration"/>
+<booleanAttribute key="default" value="true"/>
+<booleanAttribute key="default_auto_start" value="true"/>
+<intAttribute key="default_start_level" value="4"/>
+<stringAttribute key="deselected_workspace_plugins" value="0101,0109,0113,0114,0201,0202,0203,0301,0401,0501,0502,0801,0802,0803,0804,0805,0806,0807,0808,0809,0862,0863,0864,0865,0870,0871,0901,0902,1001,1002,1030,1031,1101,1102,1601,1602,1603,AUTH,BaseApp,InteractiveFrame_CMSProxy,InteractiveFrame_Configuration,InteractiveFrame_Control,InteractiveFrame_Conversation,InteractiveFrame_Coordination,InteractiveFrame_DataBuffer,InteractiveFrame_DataContainer,InteractiveFrame_DataStorage,InteractiveFrame_Device,InteractiveFrame_Entry,InteractiveFrame_Environment,InteractiveFrame_Event,InteractiveFrame_EventInterrupt,InteractiveFrame_Exception,InteractiveFrame_File,InteractiveFrame_FunctionExtension,InteractiveFrame_IM,InteractiveFrame_IPSProxy,InteractiveFrame_Log,InteractiveFrame_Logic,InteractiveFrame_Mapping,InteractiveFrame_Message,InteractiveFrame_MultiVersion,InteractiveFrame_RemoteAssistance,InteractiveFrame_Scheduler,InteractiveFrame_Security,InteractiveFrame_ServiceProxy,InteractiveFrame_SpareData,InteractiveFrame_SvcProvideControl,InteractiveFrame_SvcProvideEntry,InteractiveFrame_SysMaintenance,InteractiveFrame_Validate,InteractiveFrame_View,InteractiveFrame_WFProxy,LogicFrame,LogicFrame_BatchService,LogicFrame_CompositeService,LogicFrame_Entry,LogicFrame_LocalService,LogicFrame_Package,LogicFrame_RemoteService,LogicFrame_ServiceExtension,LogicFrame_ServiceProxy,Paperless_Storage,Paperless_common,SSOAuth,SSOBaseApp,SmartPM,SmartTeller9_SSO_Auth,TF001,TranFlow,TransApp,bootloader,com.dcfs.teller.common,com.dcfs.teller.osgi.launcher,com.dcfs.teller.remoting,com.dcfs.teller.scheduler,index,login,managerconsole,pwd,shareddevice,sso_accessor,sso_authc,sso_authr,sso_common,sso_dataManager,sso_transporter"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+<stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.7"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -consoleLog -console"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true -Dosgi.noShutdown=true"/>
+<stringAttribute key="pde.version" value="3.3"/>
+<booleanAttribute key="show_selected_only" value="false"/>
+<stringAttribute key="target_bundles" value="javax.servlet@default:default,org.eclipse.equinox.http.servlet@default:default"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useCustomFeatures" value="false"/>
+<booleanAttribute key="useDefaultConfigArea" value="true"/>
+<stringAttribute key="workspace_bundles" value="test2@default:default,test@default:default"/>
+</launchConfiguration>

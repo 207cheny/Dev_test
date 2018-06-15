@@ -1,0 +1,276 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514461822022
+activated,perspective,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.DebugPerspective",1514461822220
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.DebugView",1514461824591
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514461824667
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.BreakpointView",1514461835605
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514461839477
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514462747072
+activated,perspective,com.dcfs.teller.ide.function,1.0.0.201104071048,"com.dcfs.teller.ide.function.perspective.SmartTellerPerspective",1514462749316
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514462749364
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514462766501
+closed,editor,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.sourcelookup.CommonSourceNotFoundEditor",1514462825771
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514462827802
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514462829306
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463098379
+activated,view,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.PackageExplorer",1514463105278
+opened,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463111265
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463111510
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.ManageBreakpointRulerAction",1514463122965
+activated,perspective,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.DebugPerspective",1514463124987
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.BreakpointView",1514463126428
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463126515
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463127624
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463128615
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463129472
+activated,perspective,com.dcfs.teller.ide.function,1.0.0.201104071048,"com.dcfs.teller.ide.function.perspective.SmartTellerPerspective",1514463130298
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463130361
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.ManageBreakpointRulerAction",1514463133228
+activated,perspective,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.DebugPerspective",1514463135301
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.BreakpointView",1514463136641
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463137848
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463141912
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463151373
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.DebugView",1514463152613
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463157400
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463184086
+activated,perspective,com.dcfs.teller.ide.function,1.0.0.201104071048,"com.dcfs.teller.ide.function.perspective.SmartTellerPerspective",1514463192999
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463193045
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463204123
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.findReplace",1514463204285
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463207766
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463210598
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.findReplace",1514463210752
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463213962
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.ManageBreakpointRulerAction",1514463218056
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463224071
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463242189
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463242246
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463245224
+activated,perspective,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.DebugPerspective",1514463245530
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.VariableView",1514463252877
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463262415
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.StepOver",1514463264149
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.StepOver",1514463265206
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.StepOver",1514463265748
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.StepOver",1514463267871
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.StepOver",1514463268934
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.StepOver",1514463274056
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463277163
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463293254
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.VariableView",1514463293330
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463295018
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.StepOver",1514463295346
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.StepOver",1514463299950
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.StepOver",1514463301215
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.StepInto",1514463309150
+opened,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463309462
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463309600
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.StepOver",1514463316470
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463316662
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.StepInto",1514463317669
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463323166
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463332282
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.VariableView",1514463332341
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463361540
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463363906
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463368364
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463587220
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463595089
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.BreakpointView",1514463598604
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463600610
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463630881
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463631845
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.BreakpointView",1514463637063
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463637123
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463638447
+activated,perspective,com.dcfs.teller.ide.function,1.0.0.201104071048,"com.dcfs.teller.ide.function.perspective.SmartTellerPerspective",1514463649864
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463649924
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463651649
+executed,command,,,"AUTOGEN:::org.eclipse.jdt.debug.CompilationUnitEditor.BreakpointRulerActions/org.eclipse.jdt.debug.ui.actions.ManageBreakpointRulerAction",1514463678288
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463680300
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463683000
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463749457
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463763323
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463763449
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463763782
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463766205
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463766293
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463775142
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463775216
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463775509
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463787285
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463789895
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463796473
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463808635
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463810528
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463820239
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463829135
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463830502
+activated,perspective,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.DebugPerspective",1514463830790
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.StepOver",1514463835080
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.VariableView",1514463842041
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463850466
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463851614
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463854017
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463855447
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463856554
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463858695
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.VariableView",1514463862515
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463863471
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463863734
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463864675
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.VariableView",1514463875920
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463876794
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463878759
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463883672
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463885340
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463886754
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463888727
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463934928
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463950503
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514463950578
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463966132
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463969001
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.DebugView",1514463970190
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463972572
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463977172
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463988166
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514463990200
+activated,view,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.callhierarchy.view",1514463990219
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463994828
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514463997286
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464002263
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464003751
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464006839
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464010367
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464013413
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464026433
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464029072
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.VariableView",1514464035656
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464036710
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464038392
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464042886
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464054339
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464069300
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464176576
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.DebugView",1514464177860
+started,bundle,org.eclipse.ui.externaltools,3.2.0.v20100427,"org.eclipse.ui.externaltools",1514464178801
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.VariableView",1514464192447
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464197177
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514464198921
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.VariableView",1514464201675
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464204120
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464211785
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464214029
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464221596
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464225446
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464229457
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464247954
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464253063
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464262426
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464276124
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464283150
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464289272
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514464302604
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.VariableView",1514464304801
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464310298
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464313548
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514464315183
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464321871
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464367952
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464374495
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464374889
+activated,view,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.callhierarchy.view",1514464376828
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.VariableView",1514464379791
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464382450
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464395667
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464407238
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464410598
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464412731
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464413967
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464416379
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464427493
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464429268
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464433806
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464440765
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464440970
+error,log,,,"发生内部错误",1514464441052
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464441129
+error,log,,,"Unhandled event loop exception",1514464441148
+error,log,,,"发生内部错误",1514464441452
+error,log,,,"发生内部错误",1514464441580
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464443521
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464444861
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464445719
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464446035
+error,log,,,"发生内部错误",1514464446130
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464450916
+error,log,,,"Unhandled event loop exception",1514464455097
+error,log,,,"Unhandled event loop exception",1514464455103
+executed,command,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.commands.Resume",1514464455498
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464455733
+error,log,,,"发生内部错误",1514464455847
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464458490
+error,log,,,"Unhandled event loop exception",1514464458514
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514464460564
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464463520
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464466804
+error,log,,,"Unhandled event loop exception",1514464466829
+error,log,,,"Unhandled event loop exception",1514464466868
+error,log,,,"Unhandled event loop exception",1514464466877
+error,log,,,"Unhandled event loop exception",1514464466886
+error,log,,,"Unhandled event loop exception",1514464466896
+error,log,,,"Unhandled event loop exception",1514464467094
+error,log,,,"Unhandled event loop exception",1514464467102
+error,log,,,"Unhandled event loop exception",1514464467111
+error,log,,,"Unhandled event loop exception",1514464467118
+error,log,,,"Unhandled event loop exception",1514464467127
+error,log,,,"Unhandled event loop exception",1514464467134
+error,log,,,"Unhandled event loop exception",1514464467144
+error,log,,,"Unhandled event loop exception",1514464467152
+error,log,,,"Unhandled event loop exception",1514464467631
+error,log,,,"Unhandled event loop exception",1514464467639
+error,log,,,"Unhandled event loop exception",1514464467647
+error,log,,,"Unhandled event loop exception",1514464467658
+error,log,,,"Unhandled event loop exception",1514464467666
+error,log,,,"Unhandled event loop exception",1514464467674
+error,log,,,"Unhandled event loop exception",1514464467683
+error,log,,,"Unhandled event loop exception",1514464467691
+error,log,,,"Unhandled event loop exception",1514464467699
+error,log,,,"Unhandled event loop exception",1514464467707
+error,log,,,"Unhandled event loop exception",1514464467717
+error,log,,,"Unhandled event loop exception",1514464467725
+error,log,,,"Unhandled event loop exception",1514464467733
+error,log,,,"Unhandled event loop exception",1514464467740
+error,log,,,"Unhandled event loop exception",1514464467747
+error,log,,,"Unhandled event loop exception",1514464467755
+error,log,,,"Unhandled event loop exception",1514464467765
+error,log,,,"Unhandled event loop exception",1514464467772
+error,log,,,"Unhandled event loop exception",1514464467780
+error,log,,,"Unhandled event loop exception",1514464467788
+error,log,,,"Unhandled event loop exception",1514464467796
+error,log,,,"Unhandled event loop exception",1514464467804
+error,log,,,"Unhandled event loop exception",1514464467813
+error,log,,,"Unhandled event loop exception",1514464467821
+error,log,,,"Unhandled event loop exception",1514464467829
+error,log,,,"Unhandled event loop exception",1514464467838
+error,log,,,"Unhandled event loop exception",1514464467845
+error,log,,,"Unhandled event loop exception",1514464467853
+error,log,,,"Unhandled event loop exception",1514464467874
+error,log,,,"Unhandled event loop exception",1514464467883
+error,log,,,"Unhandled event loop exception",1514464467891
+error,log,,,"Unhandled event loop exception",1514464467900
+error,log,,,"Unhandled event loop exception",1514464467908
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514464467998
+error,log,,,"发生内部错误",1514464468111
+error,log,,,"Unhandled event loop exception",1514464468371
+error,log,,,"Unhandled event loop exception",1514464468389
+error,log,,,"Unhandled event loop exception",1514464468399
+error,log,,,"Unhandled event loop exception",1514464468408
+error,log,,,"Unhandled event loop exception",1514464468417
+error,log,,,"Unhandled event loop exception",1514464468426
+error,log,,,"Unhandled event loop exception",1514464468434
+error,log,,,"Unhandled event loop exception",1514464468443
+error,log,,,"Unhandled event loop exception",1514464468450
+error,log,,,"Unhandled event loop exception",1514464468458

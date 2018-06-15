@@ -1,0 +1,64 @@
+!SESSION 2018-01-21 19:08:12.128 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Command-line arguments:  -dev file:E:/ZGSH/space2/.metadata/.plugins/org.eclipse.pde.core/New_configuration/dev.properties -os win32 -ws win32 -arch x86 -consoleLog -console
+
+!ENTRY test2 4 0 2018-01-21 19:08:12.444
+!MESSAGE 
+!STACK 0
+org.osgi.framework.BundleException: The bundle "test2_1.0.0.qualifier [1]" could not be resolved. Reason: Missing Constraint: Require-Bundle: org.eclipse.equinox.http.servlet; bundle-version="1.1.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1317)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1301)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:319)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:374)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1067)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:561)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:546)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:459)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:440)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:227)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+!ENTRY org.eclipse.equinox.http.servlet 4 0 2018-01-21 19:08:12.459
+!MESSAGE 
+!STACK 0
+org.osgi.framework.BundleException: The bundle "org.eclipse.equinox.http.servlet_1.1.0.v20100503 [4]" could not be resolved. Reason: Missing Constraint: Import-Package: org.osgi.service.http; version="1.2.0"
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolverError(AbstractBundle.java:1317)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.getResolutionFailureException(AbstractBundle.java:1301)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.startWorker(BundleHost.java:319)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.resume(AbstractBundle.java:374)
+	at org.eclipse.osgi.framework.internal.core.Framework.resumeBundle(Framework.java:1067)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:561)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.resumeBundles(StartLevelManager.java:546)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.incFWSL(StartLevelManager.java:459)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.doSetStartLevel(StartLevelManager.java:243)
+	at org.eclipse.osgi.framework.internal.core.StartLevelManager.dispatchEvent(StartLevelManager.java:440)
+	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:227)
+	at org.eclipse.osgi.framework.eventmgr.EventManager$EventThread.run(EventManager.java:337)
+
+!ENTRY org.eclipse.osgi 4 0 2018-01-21 19:08:12.481
+!MESSAGE Bundle initial@reference:file:../../../../ZGSH/space2/test2/ was not resolved.
+
+!ENTRY org.eclipse.osgi 4 0 2018-01-21 19:08:12.481
+!MESSAGE Bundle initial@reference:file:org.eclipse.equinox.http.servlet_1.1.0.v20100503.jar/ was not resolved.
+
+!ENTRY org.eclipse.osgi 2 0 2018-01-21 19:08:12.481
+!MESSAGE One or more bundles are not resolved because the following root constraints are not resolved:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2018-01-21 19:08:12.481
+!MESSAGE Bundle initial@reference:file:org.eclipse.equinox.http.servlet_1.1.0.v20100503.jar/ was not resolved.
+!SUBENTRY 2 org.eclipse.equinox.http.servlet 2 0 2018-01-21 19:08:12.481
+!MESSAGE Missing imported package org.osgi.service.http_1.2.0.
+
+!ENTRY org.eclipse.osgi 2 0 2018-01-21 19:08:12.481
+!MESSAGE The following is a complete list of bundles which are not resolved, see the prior log entry for the root cause if it exists:
+!SUBENTRY 1 org.eclipse.osgi 2 0 2018-01-21 19:08:12.481
+!MESSAGE Bundle test2_1.0.0.qualifier [1] was not resolved.
+!SUBENTRY 2 test2 2 0 2018-01-21 19:08:12.481
+!MESSAGE Missing required bundle org.eclipse.equinox.http.servlet_1.1.0.
+!SUBENTRY 1 org.eclipse.osgi 2 0 2018-01-21 19:08:12.481
+!MESSAGE Bundle org.eclipse.equinox.http.servlet_1.1.0.v20100503 [4] was not resolved.
+!SUBENTRY 2 org.eclipse.equinox.http.servlet 2 0 2018-01-21 19:08:12.481
+!MESSAGE Missing imported package org.osgi.service.http_1.2.0.

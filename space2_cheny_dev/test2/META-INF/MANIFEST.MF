@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Test2
+Bundle-SymbolicName: test2
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: osgi.demo2.ValidatoeImpt.Activator
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: org.osgi.framework;version="1.3.0",
+ osgi.demo.IValidator
+Require-Bundle: org.eclipse.equinox.http.servlet;bundle-version="1.1.0",
+ test;bundle-version="1.0.0"
+Bundle-ClassPath: .,
+ lib/poi-3.12.jar

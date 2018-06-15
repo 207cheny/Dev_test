@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="helloWorld" class="com.java1234.test.HelloWorld"  abstract="true">
+		<constructor-arg>
+			<ref bean="helloWorld" />
+		</constructor-arg>
+	</bean>
+	<!-- 添加一个properties文件 读取后可以直接获取 -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>db.properties</value>
+		</property>
+	</bean>
+<context:annotation-config />
+</beans>

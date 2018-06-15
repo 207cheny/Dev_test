@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="myrabbitmq"/>
+<aop-project name="Spring401"/>
+<aop-project name="Spring402-05"/>
+</aop-reference-model>

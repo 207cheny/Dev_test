@@ -1,0 +1,14 @@
+#Thu Dec 28 16:22:52 CST 2017
+resource=/frame_work/InteractiveFrame_ClientResource/application/resource.jar
+schema=/config/schema
+frame_work=/frame_work
+service=/config/service_interface
+showIntro=false
+voucher=/config/print/template
+eclipse.preferences.version=1
+location=/function
+teller_i18n=/frame_work/InteractiveFrame_ClientResource/application/lgresource/tellerStage_zh.lgdict
+ExceptionCode=/config/configuration/exception/SmartPM_zh_CN.properties
+composite_mapping=/config/mapping
+teller=SmartPM
+i18n=/frame_work/InteractiveFrame_ClientResource/application/lgresource/rootStage_zh.lgdict

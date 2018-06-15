@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workingSetManager>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1514018298707_1" label="平台SoureCode" name="平台SoureCode">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_WFProxy" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Device" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/LogicFrame_BatchService" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Conversation" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.widget.SignatureTrackPlayer" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_SysMaintenance" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_SpareData" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Configuration" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_File" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/LogicFrame_Package" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_CMSProxy" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/LogicFrame_CompositeService" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Entry" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Mapping" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_DataStorage" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Log" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/BaseApp" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.scheduler" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/RemoteSystemsTempFiles" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Environment" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/commonFrame" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/LogicFrame_ServiceProxy" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_ServiceProxy" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Logic" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/LogicFrame_LocalService" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.widget.PDFControlExt" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_DataContainer" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sso_accessor" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sso_authc" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/client" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_View" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.function.ClientFunctions" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/LogicFrame_ServiceExtension" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.widget.PaperlessCaptureImageOLEControlPanel" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sso_transporter" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Validate" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_IPSProxy" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_SvcProvideControl" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/AUTH" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Exception" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.device.CENTERM_A10" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SSOAuth" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Scheduler" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.widget.PaperlessVoucherOLEControlPanel" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/TransApp" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/LogicFrame" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_DataBuffer" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Paperless_Storage" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.widget.PaperlessAssistOLEControlPanel" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_EventInterrupt" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Security" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.device.AppraiserCHJ800U" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/paperless" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/Paperless_common" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.device.GEIT_SMY006F" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.viewmodel.InstantMessage" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/LogicFrame_RemoteService" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.viewmodel.SceneGuideWindow" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sso_common" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Message" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SmartTeller-sso" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.remoting" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_IM" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sso" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_RemoteAssistance" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/LogicFrame_Entry" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sso_authr" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_SvcProvideEntry" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/sso_dataManager" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.device.ZhelinScanner" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Coordination" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.widget.PDFViewer" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_MultiVersion" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.device.NANTIAN_BP8910S006" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.widget.SunScanControlPanel" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Event" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.common" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SSOBaseApp" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.osgi.launcher" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.viewmodel.SceneLockWhenAuth" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_FunctionExtension" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/InteractiveFrame_Control" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/com.dcfs.teller.client.plugin.device.CENTERM_MK500C" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1514442335062_3" label="SmartTeller-PM" name="SmartTeller-PM">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/SmartPM" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1514791429269_7" label="jdkSource" name="jdkSource"/>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1514880560371_7" label="SmartTeller" name="SmartTeller">
+<item elementID="=SmartTeller9_SSO_Auth" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1516103641906_8" label="基础交易" name="基础交易">
+<item elementID="=1601" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=1102" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/trans-standard" type="4"/>
+<item elementID="=index" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=shareddevice" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=TF001" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0203" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0401" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0801" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0805" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0809" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0863" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0870" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=TranFlow" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=1002" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=1031" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=1101" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=managerconsole" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0101" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0109" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0901" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0501" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0802" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0806" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0864" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0871" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=bootloader" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=1603" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=1001" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=1030" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0113" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0201" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0902" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0502" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0803" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0807" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0865" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=1602" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0114" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0202" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0301" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=pwd" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0804" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0808" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=0862" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=login" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1516526584149_9" label="test" name="test">
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/test2" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/test3" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/test" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/MavenDemo" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1517536155501_11" label="SPI" name="SPI">
+<item elementID="=JavaSPI" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1518013386324_12" label="Proxy" name="Proxy">
+<item elementID="=DnyProxyDemo" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1521177359249_13" label="jdk8" name="jdk8">
+<item elementID="=jdk" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1521295171093_14" label="ThreadTest" name="ThreadTest">
+<item elementID="=ThreadTest" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1521991413539_15" label="QuartzTest" name="QuartzTest">
+<item elementID="=QuartzTest" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=QuartzTest2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1522199653988_16" label="QuartzExamples" name="QuartzExamples">
+<item elementID="=Examples" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1523241007755_17" label="AtomicReference" name="AtomicReference">
+<item elementID="=AtomicReference" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1524016971966_18" label="threadtest" name="threadtest">
+<item elementID="=ThreadTest2" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=WaitNotifyTest" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/ChenyDev" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/comment" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/comment2" type="4"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1526798777012_19" label="RabbitMQ_test" name="RabbitMQ_test">
+<item elementID="=myrabbitmq" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet editPageId="org.eclipse.jdt.ui.JavaWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1527577140179_20" label="SpringTest" name="SpringTest">
+<item elementID="=Spring405-03" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring403-02" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring402" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring404" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring404-03" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring402-02" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring402-04" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring402-06" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring402-08" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring405-02" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring401" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring403" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring404-02" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring405" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring402-03" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring402-05" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+<item elementID="=Spring402-07" factoryID="org.eclipse.jdt.ui.PersistableJavaElementFactory"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1513992281262_0" label="窗口工作集" name="Aggregate for window 1513992281262"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1514441329734_2" label="Window Working Set" name="Aggregate for window 1514441329734"/>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1514880491599_5" label="Multiple Working Sets" name="Aggregate:平台SoureCode:SmartTeller-PM:">
+<workingSet IMemento.internal.id="平台SoureCode"/>
+<workingSet IMemento.internal.id="SmartTeller-PM"/>
+</workingSet>
+<workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1516526598510_11" label="Multiple Working Sets" name="Aggregate:平台SoureCode:SmartTeller-PM:test:">
+<workingSet IMemento.internal.id="平台SoureCode"/>
+<workingSet IMemento.internal.id="SmartTeller-PM"/>
+<workingSet IMemento.internal.id="test"/>
+</workingSet>
+<mruList name="平台SoureCode"/>
+</workingSetManager>

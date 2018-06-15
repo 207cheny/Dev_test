@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<system id="SUNFRONT">
+	</system>
+	<system id="EBANK">
+	</system>
+	<system id="PM">
+		<logicexpandid = Test1 ">
+			<expand-execute impl = MobileServiceLogicExpand " />
+			<mapping in = "test_in" out="test_out" />
+			<servicecode = TELLER_MOBILE " msg_type="9999" msg_code="0001" />
+		</logicexpand>
+	</system>
+</config>

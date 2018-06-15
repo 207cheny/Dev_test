@@ -1,0 +1,26 @@
+package com.cheny.proxy;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+
+public class ProxyHandleTest implements InvocationHandler{
+
+	private Object targs;
+	
+	public Object bind(Object targs) {
+		this.targs=targs;
+		return  Proxy.newProxyInstance(targs.getClass().getClassLoader(),
+				targs.getClass().getInterfaces(), 
+                new ProxyHandleTest(targs));
+	}
+	@Override
+	public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+		// TODO Auto-generated method stub
+		System.out.println(System.currentTimeMillis());
+		Object tar=method.invoke(targs, args);
+		System.out.println(System.currentTimeMillis());
+		return tar;
+	}
+
+}

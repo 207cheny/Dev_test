@@ -1,0 +1,19 @@
+package com.cheny.proxy;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+
+public class ProxyHandleTest implements InvocationHandler{
+
+	private Object targs;
+	
+	public Object bind(Object targs) {
+		this.targs=targs;
+		//注入实例对象。返回代理类
+		return  Proxy.newProxyInstance(targs.getClass().getClassLoader(),
+				targs.getClass().getInterfaces(), this);
+	}
+	
+
+}

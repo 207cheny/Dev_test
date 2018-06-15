@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="1" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.sortColumn"/>
+	<item value="73" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth2"/>
+	<item value="251" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth1"/>
+	<item value="143" key="org.eclipse.jdt.debug.ui.jre_preference_page_context.columnWidth0"/>
+	<section name="conditionHistory">
+		<item value="&quot;0037&quot;.equals(messagecode)&amp;&amp;&quot;1400&quot;.equals(messagetype)" key="conditionHistoryEntry_6"/>
+		<item value="7" key="conditionHistoryEntryCount"/>
+		<item value="file.getPath().concat(&apos;139&apos;)" key="conditionHistoryEntry_0"/>
+		<item value="null!=datasource" key="conditionHistoryEntry_1"/>
+		<item value="&quot;other_source&quot;.equals(value)" key="conditionHistoryEntry_4"/>
+		<item value="&quot;datasource&quot;.equals(datasource)" key="conditionHistoryEntry_5"/>
+		<item value="&quot;other&quot;.equals(datasource)" key="conditionHistoryEntry_2"/>
+		<item value="extensions.contains(&quot;SmartPM_1.0.0&quot;)" key="conditionHistoryEntry_3"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
+		<item value="500" key="SashWeightTree"/>
+		<item value="500" key="SashWeightDetails"/>
+		<item value="716" key="WIDTH"/>
+		<item value="256" key="HEIGHT"/>
+	</section>
+</section>

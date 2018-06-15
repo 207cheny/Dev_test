@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<digester-rules>
+    <pattern value="conf">
+        <object-create-rule classname="com.dcfs.teller.common.configload.SystemLoadConfig"/> 
+        <set-properties-rule /> 
+        <pattern value="primal">
+	        <pattern value="item">
+				<set-properties-rule attr-name="name"/> <!-- 添加属性 -->
+				<object-create-rule classname="com.dcfs.teller.common.configload.SystemLoadItemConfig" /> <!-- 创建对象 -->
+	            <set-next-rule methodname="addPrimalConfig" paramtype="com.dcfs.teller.common.configload.SystemLoadItemConfig"/> <!-- 调用对象方法 -->
+				<bean-property-setter-rule pattern="ruleurl" />
+	            <bean-property-setter-rule pattern="dataurl" />
+	        </pattern>
+        </pattern>
+        <pattern value="extend">
+	        <pattern value="item">
+				<set-properties-rule attr-name="name"/> <!-- 添加属性 -->
+				<object-create-rule classname="com.dcfs.teller.common.configload.SystemLoadItemConfig" /> <!-- 创建对象 -->
+	            <set-next-rule methodname="addExtendConfig" paramtype="com.dcfs.teller.common.configload.SystemLoadItemConfig"/> <!-- 调用对象方法 -->
+				<bean-property-setter-rule pattern="ruleurl" />
+	            <bean-property-setter-rule pattern="dataurl" />
+	        </pattern>
+        </pattern>
+    </pattern>
+</digester-rules>

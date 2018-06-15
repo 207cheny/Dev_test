@@ -1,0 +1,276 @@
+what,kind,bundleId,bundleVersion,description,time
+activated,perspective,com.dcfs.teller.ide.function,,"com.dcfs.teller.ide.function.perspective.SmartTellerPerspective",1514712224007
+started,bundle,org.eclipse.osgi,3.6.2.R36x_v20110210,"org.eclipse.osgi",1514712224009
+started,bundle,org.eclipse.equinox.simpleconfigurator,1.0.200.v20100503,"org.eclipse.equinox.simpleconfigurator",1514712224010
+started,bundle,com.collabnet.subversion.merge,2.2.4,"com.collabnet.subversion.merge",1514712224010
+started,bundle,com.ibm.icu,4.2.1.v20100412,"com.ibm.icu",1514712224011
+started,bundle,org.eclipse.compare,3.5.101.R36x_v20100929-0800,"org.eclipse.compare",1514712224013
+started,bundle,org.eclipse.compare.core,3.5.101.R36x_v20100929-0800,"org.eclipse.compare.core",1514712224014
+started,bundle,org.eclipse.core.contenttype,3.4.100.v20100505-1235,"org.eclipse.core.contenttype",1514712224025
+started,bundle,org.eclipse.core.databinding.observable,1.3.0.I20100601-0800,"org.eclipse.core.databinding.observable",1514712224033
+started,bundle,org.eclipse.core.expressions,3.4.200.v20100505,"org.eclipse.core.expressions",1514712224035
+started,bundle,org.eclipse.core.filebuffers,3.5.100.v20100520-0800,"org.eclipse.core.filebuffers",1514712224037
+started,bundle,org.eclipse.core.filesystem,1.3.1.R36x_v20100727-0745,"org.eclipse.core.filesystem",1514712224039
+started,bundle,org.eclipse.core.jobs,3.5.1.R36x_v20100824,"org.eclipse.core.jobs",1514712224046
+started,bundle,org.eclipse.core.net,1.2.100.I20100511-0800,"org.eclipse.core.net",1514712224047
+started,bundle,org.eclipse.core.resources,3.6.1.R36x_v20110131-1630,"org.eclipse.core.resources",1514712224049
+started,bundle,org.eclipse.core.runtime,3.6.0.v20100505,"org.eclipse.core.runtime",1514712224050
+started,bundle,org.eclipse.core.runtime.compatibility,3.2.100.v20100505,"org.eclipse.core.runtime.compatibility",1514712224052
+started,bundle,org.eclipse.core.runtime.compatibility.auth,3.2.200.v20100517,"org.eclipse.core.runtime.compatibility.auth",1514712224060
+started,bundle,org.eclipse.core.variables,3.2.400.v20100505,"org.eclipse.core.variables",1514712224074
+started,bundle,org.eclipse.debug.core,3.6.0.v20100519,"org.eclipse.debug.core",1514712224076
+started,bundle,org.eclipse.emf.common,2.6.0.v20100914-1218,"org.eclipse.emf.common",1514712224077
+started,bundle,org.eclipse.emf.ecore,2.6.1.v20100914-1218,"org.eclipse.emf.ecore",1514712224080
+started,bundle,org.eclipse.epp.usagedata.gathering,1.3.1.R201102081640,"org.eclipse.epp.usagedata.gathering",1514712224080
+started,bundle,org.eclipse.epp.usagedata.recording,1.3.1.R201102081640,"org.eclipse.epp.usagedata.recording",1514712224084
+started,bundle,org.eclipse.equinox.app,1.3.1.R36x_v20100803,"org.eclipse.equinox.app",1514712224090
+started,bundle,org.eclipse.equinox.common,3.6.0.v20100503,"org.eclipse.equinox.common",1514712224091
+started,bundle,org.eclipse.equinox.ds,1.2.1.R36x_v20100803,"org.eclipse.equinox.ds",1514712224097
+started,bundle,org.eclipse.equinox.event,1.2.0.v20100503,"org.eclipse.equinox.event",1514712224107
+started,bundle,org.eclipse.equinox.p2.core,2.0.3.R36x_v20110111,"org.eclipse.equinox.p2.core",1514712224108
+started,bundle,org.eclipse.equinox.p2.directorywatcher,1.0.203.R36x_v20101220,"org.eclipse.equinox.p2.directorywatcher",1514712224108
+started,bundle,org.eclipse.equinox.p2.engine,2.0.1.R36x_v20110201,"org.eclipse.equinox.p2.engine",1514712224109
+started,bundle,org.eclipse.equinox.p2.metadata,2.0.1.R36x_v20101202,"org.eclipse.equinox.p2.metadata",1514712224109
+started,bundle,org.eclipse.equinox.p2.metadata.repository,1.1.0.v20100513,"org.eclipse.equinox.p2.metadata.repository",1514712224109
+started,bundle,org.eclipse.equinox.p2.operations,2.0.0.v20100510,"org.eclipse.equinox.p2.operations",1514712224110
+started,bundle,org.eclipse.equinox.p2.reconciler.dropins,1.1.2.R36x_v20110114,"org.eclipse.equinox.p2.reconciler.dropins",1514712224110
+started,bundle,org.eclipse.equinox.p2.repository,2.0.2.R36x_v20110111-1500,"org.eclipse.equinox.p2.repository",1514712224111
+started,bundle,org.eclipse.equinox.p2.ui.sdk.scheduler,1.0.0.v20100507-1815,"org.eclipse.equinox.p2.ui.sdk.scheduler",1514712224111
+started,bundle,org.eclipse.equinox.p2.updatechecker,1.1.101.R36x_v20100823,"org.eclipse.equinox.p2.updatechecker",1514712224111
+started,bundle,org.eclipse.equinox.preferences,3.3.0.v20100503,"org.eclipse.equinox.preferences",1514712224123
+started,bundle,org.eclipse.equinox.registry,3.5.0.v20100503,"org.eclipse.equinox.registry",1514712224123
+started,bundle,org.eclipse.equinox.security,1.0.200.v20100503,"org.eclipse.equinox.security",1514712224236
+started,bundle,org.eclipse.equinox.util,1.0.200.v20100503,"org.eclipse.equinox.util",1514712224242
+started,bundle,org.eclipse.help,3.5.0.v20100524,"org.eclipse.help",1514712224249
+started,bundle,org.eclipse.jdt.apt.core,3.3.402.R36_v20110120-1000,"org.eclipse.jdt.apt.core",1514712224250
+started,bundle,org.eclipse.jdt.apt.pluggable.core,1.0.301.R36_v20100727-0110,"org.eclipse.jdt.apt.pluggable.core",1514712224255
+started,bundle,org.eclipse.jdt.core,3.6.2.v_A76_R36x,"org.eclipse.jdt.core",1514712224256
+started,bundle,org.eclipse.jdt.core.manipulation,1.3.0.v20100520-0800,"org.eclipse.jdt.core.manipulation",1514712224262
+started,bundle,org.eclipse.jdt.junit,3.6.1.r361_v20100825-0800,"org.eclipse.jdt.junit",1514712224270
+started,bundle,org.eclipse.jdt.launching,3.5.200.v20110105_r362,"org.eclipse.jdt.launching",1514712224272
+started,bundle,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui",1514712224272
+started,bundle,org.eclipse.jface,3.6.2.M20110210-1200,"org.eclipse.jface",1514712224273
+started,bundle,org.eclipse.jsch.core,1.1.200.I20100505-1245,"org.eclipse.jsch.core",1514712224278
+started,bundle,org.eclipse.ltk.core.refactoring,3.5.101.r362_v20101117-0800,"org.eclipse.ltk.core.refactoring",1514712224288
+started,bundle,org.eclipse.ltk.ui.refactoring,3.5.0.v20100526-0800,"org.eclipse.ltk.ui.refactoring",1514712224295
+started,bundle,org.eclipse.pde,3.6.1.v201102101200,"org.eclipse.pde",1514712224295
+started,bundle,org.eclipse.pde.core,3.6.2.v20110210_r362,"org.eclipse.pde.core",1514712224297
+started,bundle,org.eclipse.pde.launching,3.6.0.v20100601,"org.eclipse.pde.launching",1514712224305
+started,bundle,org.eclipse.pde.ui,3.6.1.v20110210_r362,"org.eclipse.pde.ui",1514712224309
+started,bundle,org.eclipse.team.core,3.5.101.R36x_v20110203-1036,"org.eclipse.team.core",1514712224310
+started,bundle,org.eclipse.team.cvs.core,3.3.301.R36x_v20110119-0815,"org.eclipse.team.cvs.core",1514712224311
+started,bundle,org.eclipse.team.cvs.ui,3.3.302.R36x_v20110203-1036,"org.eclipse.team.cvs.ui",1514712224313
+started,bundle,org.eclipse.team.ui,3.5.102.R36x_v20110203-1036,"org.eclipse.team.ui",1514712224316
+started,bundle,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui",1514712224322
+started,bundle,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console",1514712224323
+started,bundle,org.eclipse.ui.editors,3.6.1.r361_v20100825-0800,"org.eclipse.ui.editors",1514712224323
+started,bundle,org.eclipse.ui.ide,3.6.2.M20101201-0800,"org.eclipse.ui.ide",1514712224325
+started,bundle,org.eclipse.ui.net,1.2.100.I20100505-1245,"org.eclipse.ui.net",1514712224331
+started,bundle,org.eclipse.ui.views,3.5.1.M20110202-0800,"org.eclipse.ui.views",1514712224333
+started,bundle,org.eclipse.ui.views.log,1.0.100.v20110210_r362,"org.eclipse.ui.views.log",1514712224335
+started,bundle,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"org.eclipse.ui.workbench",1514712224336
+started,bundle,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.workbench.texteditor",1514712224339
+started,bundle,org.eclipse.wst.common.project.facet.core,1.4.102.v201008170019,"org.eclipse.wst.common.project.facet.core",1514712224339
+started,bundle,org.tigris.subversion.clientadapter,1.6.12,"org.tigris.subversion.clientadapter",1514712224340
+started,bundle,org.tigris.subversion.subclipse.core,1.6.18,"org.tigris.subversion.subclipse.core",1514712224340
+started,bundle,org.tigris.subversion.subclipse.ui,1.6.18,"org.tigris.subversion.subclipse.ui",1514712224343
+started,bundle,com.dcfs.teller.ide.businessmodel,1.0.0.201104071048,"com.dcfs.teller.ide.businessmodel",1514712224343
+started,bundle,com.dcfs.teller.ide.businessmodel.interfaces,1.0.0.201104071048,"com.dcfs.teller.ide.businessmodel.interfaces",1514712224344
+started,bundle,com.dcfs.teller.ide.businessmodel.manager,1.0.0.201104071048,"com.dcfs.teller.ide.businessmodel.manager",1514712224344
+started,bundle,com.dcfs.teller.ide.businessmodel.manager.interfaces,1.0.0.201104071048,"com.dcfs.teller.ide.businessmodel.manager.interfaces",1514712224345
+started,bundle,com.dcfs.teller.ide.core,1.0.0.201104071048,"com.dcfs.teller.ide.core",1514712224345
+started,bundle,com.dcfs.teller.ide.function,1.0.0.201104071048,"com.dcfs.teller.ide.function",1514712224346
+started,bundle,org.eclipse.wst.sse.core,1.1.506.v201110201853,"org.eclipse.wst.sse.core",1514712224347
+started,bundle,org.eclipse.wst.web,1.1.403.v201103081400,"org.eclipse.wst.web",1514712224348
+started,bundle,org.maven.ide.eclipse,0.12.1.20110112-1712,"org.maven.ide.eclipse",1514712224348
+started,bundle,org.maven.ide.eclipse.jdt,0.12.1.20110112-1712,"org.maven.ide.eclipse.jdt",1514712224349
+started,bundle,org.maven.ide.eclipse.maven_model_edit,0.12.1.20110112-1712,"org.maven.ide.eclipse.maven_model_edit",1514712224350
+started,bundle,org.eclipse.jst.ws.jaxws.utils,1.0.0.v201004171919,"org.eclipse.jst.ws.jaxws.utils",1514712224352
+os,sysinfo,,,"win32",1514712224354
+arch,sysinfo,,,"x86",1514712224354
+ws,sysinfo,,,"win32",1514712224354
+locale,sysinfo,,,"zh_CN",1514712224354
+processors,sysinfo,,,"4",1514712224354
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1514712224354
+java.runtime.version,sysinfo,,,"1.7.0_21-b11",1514712224354
+java.specification.name,sysinfo,,,"Java Platform API Specification",1514712224354
+java.specification.vendor,sysinfo,,,"Oracle Corporation",1514712224354
+java.specification.version,sysinfo,,,"1.7",1514712224354
+java.vendor,sysinfo,,,"Oracle Corporation",1514712224354
+java.version,sysinfo,,,"1.7.0_21",1514712224354
+java.vm.info,sysinfo,,,"mixed mode",1514712224354
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1514712224354
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1514712224354
+java.vm.specification.vendor,sysinfo,,,"Oracle Corporation",1514712224354
+java.vm.specification.version,sysinfo,,,"1.7",1514712224354
+java.vm.vendor,sysinfo,,,"Oracle Corporation",1514712224354
+java.vm.version,sysinfo,,,"23.21-b01",1514712224354
+started,bundle,org.eclipse.mylyn.monitor.ui,3.4.1.v20110131-0100-e3x,"org.eclipse.mylyn.monitor.ui",1514712224740
+started,bundle,org.eclipse.mylyn.commons.net,3.4.1.v20100625-2100-e3x,"org.eclipse.mylyn.commons.net",1514712224759
+started,bundle,org.eclipse.emf.ecore.xmi,2.5.0.v20100521-1846,"org.eclipse.emf.ecore.xmi",1514712224774
+started,bundle,org.eclipse.jst.common.project.facet.core,1.4.102.v201008182136,"org.eclipse.jst.common.project.facet.core",1514712224920
+started,bundle,org.eclipse.mylyn.commons.ui,3.4.0.v20100608-0100-e3x,"org.eclipse.mylyn.commons.ui",1514712224921
+started,bundle,org.eclipse.jst.ws.jaxrs.core,1.0.201.v201011231540,"org.eclipse.jst.ws.jaxrs.core",1514712224945
+started,bundle,org.eclipse.mylyn.bugzilla.core,3.4.2.v20100902-0100-e3x,"org.eclipse.mylyn.bugzilla.core",1514712225025
+started,bundle,org.eclipse.mylyn.bugzilla.ui,3.4.3.v20110131-0100-e3x,"org.eclipse.mylyn.bugzilla.ui",1514712225057
+started,bundle,org.eclipse.ui.forms,3.5.2.r36_v20100702,"org.eclipse.ui.forms",1514712225099
+started,bundle,org.eclipse.mylyn.context.core,3.4.1.v20100909-0100-e3x,"org.eclipse.mylyn.context.core",1514712225353
+started,bundle,org.eclipse.mylyn.context.ui,3.4.2.v20110131-0100-e3x,"org.eclipse.mylyn.context.ui",1514712225367
+started,bundle,org.eclipse.mylyn.tasks.ui,3.4.3.v20110131-0100-e3x,"org.eclipse.mylyn.tasks.ui",1514712225653
+started,bundle,org.eclipse.mylyn.team.ui,3.4.3.v20110131-0100-e3x,"org.eclipse.mylyn.team.ui",1514712225669
+started,bundle,org.tigris.subversion.subclipse.mylyn,3.0.0,"org.tigris.subversion.subclipse.mylyn",1514712225777
+started,bundle,org.eclipse.update.scheduler,3.2.300.v20100512,"org.eclipse.update.scheduler",1514712225899
+started,bundle,org.eclipse.update.configurator,3.3.100.v20100512,"org.eclipse.update.configurator",1514712226007
+started,bundle,org.eclipse.update.core,3.2.402.R36x_v20100629,"org.eclipse.update.core",1514712226035
+started,bundle,org.eclipse.wb.core.lib,0.9.0.r36x201104071013,"org.eclipse.wb.core.lib",1514712226076
+started,bundle,org.eclipse.wb.core,0.9.0.r36x201104071013,"org.eclipse.wb.core",1514712226107
+started,bundle,org.eclipse.wb.ercp,0.9.0.r36x201104111425,"org.eclipse.wb.ercp",1514712226236
+started,bundle,org.eclipse.wb.swt,0.9.0.r36x201104111417,"org.eclipse.wb.swt",1514712226244
+started,bundle,com.dcfs.teller.rcp,0.0.0,"com.dcfs.teller.rcp",1514712226294
+started,bundle,org.eclipse.wb.core.xml,0.9.0.r36x201104071048,"org.eclipse.wb.core.xml",1514712226313
+started,bundle,org.tigris.subversion.subclipse.tools.usage,1.0.1,"org.tigris.subversion.subclipse.tools.usage",1514712226335
+started,bundle,com.dcfs.teller.ui,0.0.0,"com.dcfs.teller.ui",1514712226349
+started,bundle,com.dcfs.teller.uiplugin,1.0.0.201104071048,"com.dcfs.teller.uiplugin",1514712231391
+started,bundle,org.sf.feeling.decompiler.cfr,2.9.0.r20160620180,"org.sf.feeling.decompiler.cfr",1514712231449
+started,bundle,org.sf.feeling.decompiler.jad,2.9.0.r20160620180,"org.sf.feeling.decompiler.jad",1514712232653
+started,bundle,org.sf.feeling.decompiler.jd,2.9.0.r20160620180,"org.sf.feeling.decompiler.jd",1514712232681
+started,bundle,org.sf.feeling.decompiler.procyon,2.9.0.r20160620180,"org.sf.feeling.decompiler.procyon",1514712232696
+started,bundle,org.sf.feeling.decompiler.update,2.9.0.r20160620180,"org.sf.feeling.decompiler.update",1514712232875
+started,bundle,org.sf.feeling.decompiler,2.9.0.r20160620180,"org.sf.feeling.decompiler",1514712232880
+started,bundle,org.eclipse.ecf.filetransfer,4.0.0.v20100906-1425,"org.eclipse.ecf.filetransfer",1514712233171
+started,bundle,org.eclipse.ecf.identity,3.1.0.v20100906-1425,"org.eclipse.ecf.identity",1514712233186
+started,bundle,org.eclipse.ecf,3.1.0.v20100906-1425,"org.eclipse.ecf",1514712233555
+started,bundle,org.eclipse.ecf.provider.filetransfer.httpclient,4.0.0.v20100906-1425,"org.eclipse.ecf.provider.filetransfer.httpclient",1514712233703
+started,bundle,org.eclipse.ecf.provider.filetransfer,3.1.0.v20100906-1425,"org.eclipse.ecf.provider.filetransfer",1514712233704
+error,log,,,"",1514712234452
+error,log,,,"",1514712235185
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514712286884
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514712476791
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514712477886
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514712533342
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514712536194
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714094297
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714094413
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714098851
+started,bundle,org.eclipse.pde.ds.core,1.0.100.v20100601,"org.eclipse.pde.ds.core",1514714099290
+started,bundle,org.eclipse.mylyn.java.tasks,3.4.0.v20100608-0100-e3x,"org.eclipse.mylyn.java.tasks",1514714101120
+started,bundle,org.tigris.subversion.clientadapter.javahl,1.6.17,"org.tigris.subversion.clientadapter.javahl",1514714101146
+started,bundle,org.tigris.subversion.clientadapter.svnkit,1.6.15,"org.tigris.subversion.clientadapter.svnkit",1514714101148
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.undo",1514714101603
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714105775
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714107286
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714108236
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714116877
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.redo",1514714120331
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.wordPrevious",1514714124617
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.wordPrevious",1514714125271
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.wordPrevious",1514714125703
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.wordPrevious",1514714126057
+executed,command,org.eclipse.ui.workbench.texteditor,3.6.1.r361_v20100714-0800,"org.eclipse.ui.edit.text.goto.wordPrevious",1514714126396
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.undo",1514714127317
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.redo",1514714131446
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.undo",1514714132492
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.redo",1514714136722
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.undo",1514714140821
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714145986
+error,log,,,"Build errors for TransApp",1514714284395
+error,log,,,"Build errors for AUTH",1514714311314
+started,bundle,org.eclipse.core.externaltools,1.0.1.v20100831_r361,"org.eclipse.core.externaltools",1514714311466
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714367401
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714367431
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714370935
+error,log,,,"Build errors for TransApp",1514714371206
+error,log,,,"Build errors for TransApp",1514714372268
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.undo",1514714372516
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.file.save",1514714376103
+error,log,,,"Build errors for TransApp",1514714376325
+error,log,,,"Build errors for TransApp",1514714377378
+activated,perspective,org.eclipse.debug.ui,,"org.eclipse.debug.ui.DebugPerspective",1514714384435
+started,bundle,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui",1514714385866
+started,bundle,org.eclipse.jdt.debug,3.6.1.v20100715_r361,"org.eclipse.jdt.debug",1514714386384
+opened,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.BreakpointView",1514714386416
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.BreakpointView",1514714386619
+started,bundle,org.eclipse.jdt.debug.ui,3.5.2.v20100928a_r362,"org.eclipse.jdt.debug.ui",1514714386740
+started,bundle,org.eclipse.mylyn.ide.ui,3.4.0.v20100608-0100-e3x,"org.eclipse.mylyn.ide.ui",1514714388939
+started,bundle,org.eclipse.mylyn.java.ui,3.4.0.v20100608-0100-e3x,"org.eclipse.mylyn.java.ui",1514714388942
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714388956
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714390261
+started,bundle,org.eclipse.wst.jsdt.debug.ui,1.0.6.v201109150205,"org.eclipse.wst.jsdt.debug.ui",1514714393649
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714393756
+started,bundle,org.eclipse.wst.jsdt.debug.core,1.1.0.v201109150205,"org.eclipse.wst.jsdt.debug.core",1514714393786
+error,log,,,"Build errors for TransApp",1514714394060
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1514714394241
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714396845
+error,log,,,"Build errors for TransApp",1514714400729
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.BreakpointView",1514714401275
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714415291
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714419819
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714430263
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714437929
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714442134
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714446301
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714450509
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714454212
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714456555
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714483105
+error,log,,,"Build errors for TransApp",1514714483295
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1514714483493
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.BreakpointView",1514714487973
+error,log,,,"Build errors for TransApp",1514714491750
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1514714491893
+error,log,,,"Build errors for TransApp",1514714492829
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.BreakpointView",1514714495438
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714497392
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714500493
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714508745
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714513630
+executed,command,org.eclipse.jdt.debug.ui,3.5.2.v20100928a_r362,"org.eclipse.jdt.debug.ui.breakpoint.properties",1514714513650
+error,log,,,"Build errors for TransApp",1514714517877
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1514714518010
+error,log,,,"Build errors for TransApp",1514714518972
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514714519863
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.BreakpointView",1514714520436
+error,log,,,"Build errors for TransApp",1514714524653
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1514714524884
+activated,view,org.eclipse.debug.ui,3.6.3.v20101201_r362,"org.eclipse.debug.ui.BreakpointView",1514714526680
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714534678
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714536942
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714542972
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714544659
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514714547088
+error,log,,,"Build errors for TransApp",1514714701254
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1514714701428
+error,log,,,"Build errors for TransApp",1514715001693
+error,log,,,"Build errors for TransApp",1514715302155
+error,log,,,"Build errors for TransApp",1514715602679
+error,log,,,"Build errors for TransApp",1514715903181
+error,log,,,"Build errors for TransApp",1514716203638
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.text.contentAssist.proposals",1514716399067
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.text.contentAssist.proposals",1514716406396
+executed,command,org.eclipse.ui,3.6.2.M20110203-1100,"org.eclipse.ui.edit.text.contentAssist.proposals",1514716428409
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514716473003
+executed,command,org.eclipse.jdt.debug.ui,3.5.2.v20100928a_r362,"org.eclipse.jdt.debug.ui.breakpoint.properties",1514716473016
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514716473788
+error,log,,,"Build errors for TransApp",1514716504031
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1514716504237
+activated,editor,org.eclipse.jdt.ui,3.6.2.r362_v20110203,"org.eclipse.jdt.ui.CompilationUnitEditor",1514716519048
+deactivated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514716602354
+error,log,,,"Build errors for TransApp",1514716804565
+activated,workbench,org.eclipse.ui.workbench,3.6.2.M20110210-1200,"",1514716804742
+activated,view,org.eclipse.ui.console,3.5.0.v20100526,"org.eclipse.ui.console.ConsoleView",1514716804757
+error,log,,,"Build errors for TransApp",1514717105038
+error,log,,,"Build errors for TransApp",1514717405567
+error,log,,,"Build errors for TransApp",1514717706059
+error,log,,,"Build errors for TransApp",1514718006584
+error,log,,,"Build errors for TransApp",1514718307125
+error,log,,,"Build errors for TransApp",1514718607512
+error,log,,,"Build errors for TransApp",1514718908020
+error,log,,,"Build errors for TransApp",1514719208530
+error,log,,,"Build errors for TransApp",1514719508957
+error,log,,,"Build errors for TransApp",1514719809510
+error,log,,,"Build errors for TransApp",1514720110027
+error,log,,,"Build errors for TransApp",1514720410561
+error,log,,,"Build errors for TransApp",1514720710939
+error,log,,,"Build errors for TransApp",1514721011438
+error,log,,,"Build errors for TransApp",1514721311906
+error,log,,,"Build errors for TransApp",1514721612400
